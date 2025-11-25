@@ -51,12 +51,13 @@ export const SiteHeader = () => {
               </div>
             ) : user ? (
               <div className="ml-auto flex items-center gap-3">
-                <button
-                  className="px-4 h-[56px] bg-[#5865F2] hover:bg-[#4752C4] text-white rounded-md text-sm font-medium transition-colors whitespace-nowrap"
+                <a
+                  href="/profile/"
+                  className="px-4 h-[56px] bg-[#5865F2] hover:bg-[#4752C4] text-white rounded-md text-sm font-medium transition-colors whitespace-nowrap flex items-center justify-center"
                   title="My Profile"
                 >
                   My Profile
-                </button>
+                </a>
                 <button
                   onClick={logout}
                   className="px-4 h-[56px] bg-gray-600 hover:bg-gray-700 text-white rounded-md text-sm font-medium transition-colors whitespace-nowrap"
