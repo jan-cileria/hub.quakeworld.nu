@@ -6,6 +6,15 @@ import classNames from "classnames";
 export const SiteHeader = () => {
   const showStreamsOnSm = ["/", "/players/"].includes(location.pathname);
 
+  const handleLogin = () => {
+    const apiUrl = import.meta.env.VITE_API_URL;
+    if (apiUrl) {
+      window.location.href = `${apiUrl}/auth/discord/login`;
+    } else {
+      console.error("VITE_API_URL is not defined");
+    }
+  };
+
   return (
     <div>
       <SettingsDrawer />
@@ -35,7 +44,7 @@ export const SiteHeader = () => {
           </div>
           <div className="flex items-center mt-2 lg:mt-0">
             <button
-              onClick={() => alert("Hallo World")}
+              onClick={handleLogin}
               className="ml-auto px-4 h-[56px] bg-[#5865F2] hover:bg-[#4752C4] text-white rounded-md text-sm font-medium transition-colors whitespace-nowrap flex items-center gap-2"
               title="Login with Discord"
             >
