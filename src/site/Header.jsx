@@ -86,7 +86,7 @@ export const SiteHeader = () => {
               <FeaturedStreams />
             </div>
           </div>
-          <div className="flex items-center mt-2 lg:mt-0">
+          {/* <div className="flex items-center mt-2 lg:mt-0">
             {loading ? (
               <div className="ml-auto px-4 h-[56px] flex items-center text-sm text-gray-600">
                 Loading...
@@ -126,7 +126,7 @@ export const SiteHeader = () => {
                 <span className="sm:hidden">Login</span>
               </button>
             )}
-          </div>
+          </div> */}
         </div>
         <div className="hidden lg:flex mt-1">
           <SiteNavigation />
